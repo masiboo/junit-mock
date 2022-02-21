@@ -3,11 +3,7 @@ package com.example.junitmock.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -24,6 +20,7 @@ import javax.persistence.ManyToOne;
 @AllArgsConstructor
 @ToString
 @Entity
+@EqualsAndHashCode
 public class C {
     @Id
     @GeneratedValue

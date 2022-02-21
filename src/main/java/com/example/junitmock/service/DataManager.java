@@ -11,8 +11,15 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public record DataManager(ARepository aRepository,
-                          BRepository bRepository) {
+public class DataManager {
+
+    private  final  ARepository aRepository;
+    private final BRepository bRepository;
+
+    public DataManager(ARepository aRepository, BRepository bRepository) {
+        this.aRepository = aRepository;
+        this.bRepository = bRepository;
+    }
 
     public A saveA(A a){
         return aRepository.save(a);

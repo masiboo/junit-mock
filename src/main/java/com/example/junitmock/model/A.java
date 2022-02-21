@@ -1,10 +1,7 @@
 package com.example.junitmock.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -13,6 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 @Entity
+@EqualsAndHashCode
 public class A {
    @Id
    @GeneratedValue
